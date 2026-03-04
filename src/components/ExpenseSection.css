@@ -1,0 +1,251 @@
+.expense-section-container {
+  padding: 0;
+}
+
+.expense-loading {
+  text-align: center;
+  padding: 40px 0;
+  color: #666;
+}
+
+/* Subsections */
+.expense-subsection {
+  margin-bottom: 30px;
+}
+
+.expense-subsection h3 {
+  margin: 0;
+  color: #e53935;
+  font-size: 18px;
+}
+
+.subsection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.btn-ledger {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-ledger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Category (주거, 생활, 구독) */
+.expense-category {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #fafafa;
+  border-radius: 8px;
+}
+
+.expense-category h4 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.category-total {
+  margin-top: 10px;
+  text-align: right;
+  font-size: 14px;
+  color: #888;
+}
+
+.subsection-total {
+  margin-top: 15px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Grid Layout (Fixed & Variable Expense) */
+.fixed-expense-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.variable-expense-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.expense-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 가계부 동기화 항목 스타일 */
+.ledger-sync-item .ledger-sync-view {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  cursor: default;
+}
+
+.ledger-sync-item .ledger-sync-view:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.ledger-sync-item .expense-label {
+  color: white;
+}
+
+.ledger-sync-item .expense-amount {
+  color: white;
+}
+
+/* View Mode (Clickable) */
+.expense-item-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.expense-item-view:hover {
+  background-color: #fff5f5;
+  border-color: #e53935;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(229, 57, 53, 0.2);
+}
+
+.expense-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.expense-label .end-date {
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+}
+
+.expense-amount {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e53935;
+}
+
+/* Editing Mode */
+.expense-item-editing {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: white;
+  border: 2px solid #e53935;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(229, 57, 53, 0.15);
+}
+
+.expense-item-editing .label-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+}
+
+.expense-item-editing .label-input:focus {
+  outline: none;
+  border-color: #e53935;
+}
+
+.expense-item-editing input:not(.label-input) {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.expense-item-editing input:not(.label-input):focus {
+  outline: none;
+  border-color: #e53935;
+}
+
+/* Variable Expense Container */
+.variable-expense-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Total */
+.expense-total {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #e53935;
+  text-align: right;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fixed-expense-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .variable-expense-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expense-item-view {
+    padding: 10px 12px;
+  }
+
+  .expense-label {
+    font-size: 14px;
+  }
+
+  .expense-amount {
+    font-size: 15px;
+  }
+
+  .expense-item-editing {
+    padding: 12px;
+  }
+
+  .expense-category {
+    padding: 12px;
+  }
+
+  .expense-category h4 {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,142 @@
+.investment-section-container {
+  padding: 0;
+}
+
+.investment-loading {
+  text-align: center;
+  padding: 40px 0;
+  color: #666;
+}
+
+/* Header */
+.investment-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 12px;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.investment-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.investment-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.08);
+  border-color: #1976d2;
+}
+
+.investment-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.investment-icon {
+  font-size: 18px;
+}
+
+.investment-cell {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.investment-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1976d2;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.investment-input-wrapper {
+  width: 100%;
+}
+
+.investment-input-wrapper input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.investment-change {
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  white-space: nowrap;
+}
+
+.investment-change.positive {
+  color: #2e7d32; /* green */
+}
+
+.investment-change.negative {
+  color: #d32f2f; /* red */
+}
+
+.investment-total-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  margin-top: 18px;
+  border-top: 2px solid #1976d2;
+}
+
+.total-label {
+  font-weight: 700;
+}
+
+.total-value {
+  font-weight: 700;
+  color: #1976d2;
+  white-space: nowrap;
+}
+
+.total-change.total-change {
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .investment-header,
+  .investment-row,
+  .investment-total-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    align-items: start;
+  }
+
+  .investment-cell {
+    justify-content: flex-start;
+  }
+
+  .investment-change {
+    margin-top: 6px;
+  }
+}

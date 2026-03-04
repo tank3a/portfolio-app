@@ -1,0 +1,260 @@
+.income-section-container {
+  padding: 0;
+}
+
+.income-loading {
+  text-align: center;
+  padding: 40px 0;
+  color: #666;
+}
+
+/* Subsections */
+.income-subsection {
+  margin-bottom: 30px;
+}
+
+.income-subsection h3 {
+  margin: 0 0 15px 0;
+  color: #4CAF50;
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.subsection-total {
+  margin-top: 15px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Grid Layout (Fixed & Variable Income) */
+.fixed-income-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.variable-income-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.income-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* View Mode (Clickable) */
+.income-item-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.income-item-view:hover {
+  background-color: #f0f0f0;
+  border-color: #4CAF50;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+}
+
+.income-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.income-amount {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4CAF50;
+}
+
+/* Editing Mode */
+.income-item-editing {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: white;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15);
+}
+
+.income-item-editing .label-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+}
+
+.income-item-editing .label-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Input with Action Buttons (Check/Delete on the right) */
+.input-with-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-with-actions input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-with-actions input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.currency {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.btn-check {
+  padding: 10px 14px;
+  background-color: transparent;
+  color: #999;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-check:hover {
+  color: #666;
+  background-color: #f0f0f0;
+}
+
+.btn-delete {
+  padding: 10px 14px;
+  background-color: transparent;
+  color: #999;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-delete:hover {
+  color: #666;
+  background-color: #f0f0f0;
+}
+
+/* Variable Income Container */
+.variable-income-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #999;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+/* Add Button */
+.btn-add {
+  padding: 12px 20px;
+  background-color: transparent;
+  color: #999;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.btn-add:hover {
+  color: #666;
+  border-color: #999;
+  background-color: #f9f9f9;
+}
+
+/* Total */
+.income-total {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #4CAF50;
+  text-align: right;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fixed-income-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .variable-income-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .income-item-view {
+    padding: 10px 12px;
+  }
+
+  .income-label {
+    font-size: 14px;
+  }
+
+  .income-amount {
+    font-size: 15px;
+  }
+
+  .income-item-editing {
+    padding: 12px;
+  }
+
+  .input-with-actions {
+    gap: 6px;
+  }
+
+  .input-with-actions input {
+    font-size: 15px;
+  }
+
+  .btn-check,
+  .btn-delete {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
